@@ -170,7 +170,8 @@ html {
 
 .sobremi h2,
 .skills h2,
-.curriculum h2 {
+.curriculum h2,
+.portafolio h2 {
     font-size: 48px;
     font-family: 'Righteous';
     text-align: center;
@@ -186,9 +187,15 @@ html {
     border-bottom: 2px solid #fff;
 }
 
+.portafolio h2 {
+    border-bottom: 2px solid #fff;
+}
+
 .sobremi h2::after,
 .skills h2::after,
-.curriculum h2::after {
+.curriculum h2::after,
+.portafolio h2::after {
+
     content: '';
     width: 40px;
     height: 9px;
