@@ -23,15 +23,15 @@
             </div>
             <nav id="nav">
                 <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#sobremi">Sobre mi</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#curriculum">Curriculum</a></li>
-                    <li><a href="#portafolio">Portafolio</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#inicio" onclick="seleccionar()">Inicio</a></li>
+                    <li><a href="#sobremi" onclick="seleccionar()">Sobre mi</a></li>
+                    <li><a href="#skills" onclick="seleccionar()">Skills</a></li>
+                    <li><a href="#curriculum" onclick="seleccionar()">Curriculum</a></li>
+                    <li><a href="#portafolio" onclick="seleccionar()">Portafolio</a></li>
+                    <li><a href="#contacto" onclick="seleccionar()">Contacto</a></li>
                 </ul>
             </nav>
-            <div class="nav-responsive">
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
                 <i class="fa-solid fa-bars"></i>
             </div>
         </header>
@@ -292,16 +292,11 @@
                             <i class="fa-solid fa-circle"></i>
                             Ingeniería Informática y Sistemas
                         </h4>
-                        <div class="casa">
-                            <p>Egresado en la Universidad Nacional Micaela Bastidas de Apurímac</p>
+                        <span class="casa">
+                            <p>Egresado en la Universidad Nacional Micaela Bastidas  de Apurímac</p>
                             <span class="fecha">2015 - 2020</span>
-                        </div>
-                        
-                        <div class="conectori">
-                            <div class="circuloi">
-                                
-                            </div>
-                        </div>
+                        </span>
+                      
                     </div>
                     <div class="item">
                         <h4> 
@@ -309,16 +304,10 @@
                             Secundaria 
                         </h4>
                         <span class="casa">
-                            I.E José Carlos Mariátegui - Antabamba - Apurímac
+                            <p>I.E José Carlos Mariátegui - Antabamba - Apurímac</p>
                             <span class="fecha">2003 - 2007</span>
                         </span>
-                        
-                        
-                        <div class="conectori">
-                            <div class="circuloi">
-
-                            </div>
-                        </div>
+                                                
                     </div>
 
                 </div>
@@ -332,13 +321,15 @@
             <h2>Portafolio</h2>
             <div class="galeria">
                 <div class="proyecto">
-                    <img src="" alt="">
-                    <div class="overlay">
+                    
+                    <div class="proyecto__descripcion">
                         <h3>
+                            
                             <a href="https://reactjimjournalapp.netlify.app/auth/login" target="_blank">Journal App
 
                             </a>                           
-                            <a href="https://github.com/universo91/journal-app">
+                            <a href="https://github.com/universo91/journal-app"
+                            target="_blank">
                                 <i class="fa-brands fa-github"></i>
                             </a>
                             
@@ -346,58 +337,80 @@
                         <p>Una aplicacion para una especie de cosas por hacer, y que sirve como recordatorio, esta implementada con React, cuenta con autenticacion por medio de google mediante firestore, se usa redux-toolkit para el manejo de los estados de la aplicacion, asi como cloudinary como almacen de imagenes </p>
                         
                     </div>
+                    <a href="https://reactjimjournalapp.netlify.app/auth/login" target="_blank">
+                        <img  class="proyecto__img"src="./img/journal.PNG" alt="journal">
+                    </a>
                 </div>
-                <div class="proyecto">
-                    <img src="" alt="">
-                    <div class="overlay">
-                        <h3>
-                            <a href="https://busqueda-paises-porcategoria.netlify.app/">Busqueda de Paises</a>
-                            <a href="https://github.com/universo91/paises-app-angular">
-                                <i class="fa-brands fa-github"></i>
-                            </a>
+                <div class="proyecto">                    
+                        <div class="proyecto__descripcion">
+                            <h3>
+                                <a href="https://busqueda-paises-porcategoria.netlify.app/"
+                                target="_blank">Busqueda de Paises</a>
+                                <a href="https://github.com/universo91/paises-app-angular"
+                                target="_blank">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+    
+                            </h3>
+                            <p>
+                                Mediante un consuma a una api por medio de peticiones http, se puede buscar paises por varias categorias. Esta aplicacion fue construida con Angular, usando obserbables para operaciones asincronas, asi como el uso de servicios para controlar la informacion de forma global
+                            </p>
 
-                        </h3>
-                        <p>
-                            Mediante un consuma a una api por medio de peticiones http, se puede buscar paises por varias categorias. Esta aplicacion fue construida con Angular, usando obserbables para operaciones asincronas, asi como el uso de servicios para controlar la informacion de forma global
-                        </p>
-                    </div>
+                        </div>
+                        <a href="https://busqueda-paises-porcategoria.netlify.app/"
+                        target="_blank">
+                    <img class="proyecto__img" src="./img/paises.PNG" alt="paises"></a>
+                   
+                </div>
+                <div class="proyecto">                    
+                   
+                        <div class="proyecto__descripcion">
+                            <h3>
+                                <a href="https://reactheroes.netlify.app/login"
+                                target="_blank">Heroes app</a>
+                                <a href="https://github.com/universo91/heroe-card"
+                                target="_blank">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </h3>
+                            <p> Un pequeño proyecto donde se muestra un forma de trabajar con useContext para el manejo del estado de la aplicacion, como tambien el uso de React router para facilitarnos la navegacion dentro de la aplicacion. </p>
+                        </div>
+                        
+                        <a href="https://reactheroes.netlify.app/login"
+                        target="_blank">
+                        <img class="proyecto__img" src="./img/heroes.PNG" alt="">
+                    </a>
+                   
                 </div>
                 <div class="proyecto">
-                    <img src="" alt="">
-                    <div class="overlay">
+                    
+                    <div class="proyecto__descripcion">
                         <h3>
-                            <a href="https://reactheroes.netlify.app/login">Heroes app</a>
-                            <a href="https://github.com/universo91/heroe-card">
+                            <a href="https://gif-appangular.netlify.app/"
+                            target="_blank">Gifs app</a>
+                            <a href="https://github.com/universo91/gif-app-angular"
+                            target="_blank">
                                 <i class="fa-brands fa-github"></i>
                             </a>
                         </h3>
-                        <p> Un pequeño proyecto donde se muestra un forma de trabajar con useContext para el manejo del estado de la aplicacion, como tambien el uso de React router para facilitarnos la navegacion dentro de la aplicacion. </p>
-                    </div>
-                </div>
-                <div class="proyecto">
-                    <img src="" alt="">
-                    <div class="overlay">
-                        <h3>
-                            <a href="https://gif-appangular.netlify.app/">Gifs app</a>
-                            <a href="https://github.com/universo91/gif-app-angular">
-                                <i class="fa-brands fa-github"></i>
-                            </a>
-                        </h3>
                         <p>
-                            A 
+                            Esta aplicacion permite encontrar una cantidad inmensa de gifs, pero esta limitada solo a mostrar una pequeña cantidad, a medidad que se van  haciendo las busquedas, estas se van guardando, en un lateral, mantendiendo solo los 10 ultimos terminos buscados. 
                         </p>
                     </div>
-                </div>
-                <div class="proyecto">
-                    <img src="" alt="">
-                    <div class="overlay">
-                        <h3></h3>
-                        <p></p>
-                    </div>
-                </div>
+                    <a href="https://gif-appangular.netlify.app/" target="_blank">
+                        <img class="proyecto__img" src="./img/appgifs.PNG" alt="gifs">
+                    </a>
+                </div>                
             </div>
         </div>
     </div>
+
+    <footer>
+        <a href="#inicio" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+        
+    </footer>
     <script src="./script.js"></script>
 </body>
 </html>

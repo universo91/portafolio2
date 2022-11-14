@@ -100,7 +100,7 @@ html {
 .inicio .contenido-banner {
     padding: 20px;
     background-color: var(--color-fondo);
-    max-width: 350px;
+    max-width: 340px;
     margin: auto;
     text-align: center;
     border-radius: 40px;
@@ -147,15 +147,21 @@ html {
 
 .sobremi , 
 .skills,
-.curriculum{    
+.curriculum,
+.portafolio {    
     color: var(--color-fondo);
     padding: 50px 20px;    
     margin: 0 auto;
 }
 
+.curriculum {
+    height: 85vh;
+}
+
 .sobremi .contenido-seccion,
 .skills .contenido-seccion,
-.curriculum .contenido-seccion
+.curriculum .contenido-seccion,
+.portafolio .contenido-seccion
  {    
     width: 80%;
     max-width: 1100px;
@@ -500,7 +506,7 @@ html {
 .curriculum__educacion .casa {
     margin-bottom: 50px 0;
     display: block;
-    width: 70%;
+    width: 90%;
     display: flex;
     justify-content: space-between;
 }
@@ -519,7 +525,254 @@ html {
     border-radius: 20px;
 }
 
+.portafolio {    
+    background-color: var(--color-fondo);
+    color: #fff;
+}
 
+footer{
+    background-color: var(--color-fondo);
+    color: #fff;
+    padding: 50px 0 30px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+
+footer .arriba{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-naranja);
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -25px;
+    border-radius: 50%;
+    line-height: 50px;
+    font-size: 18px;
+}
+
+
+
+
+.portafolio .proyecto {
+    width: 100%;   
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0;
+    background-color: #fff;
+    color: var(--color-fondo);
+    padding: 40px;
+    border-radius: 15px;
+
+}
+.proyecto__img {
+    display: block;
+    width: 25rem;
+    height: 15.5rem;  
+    border: 1px solid var(--color-fondo);
+    border-radius: 10px;
+}
+
+
+.proyecto:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.proyecto:nth-child(odd) .proyecto__descripcion  {
+margin-right: 50px;
+padding-right: 50px;
+border-right: 2px dashed var(--color-naranja);
+}
+.proyecto:nth-child(even) .proyecto__descripcion  {
+margin-left: 50px;
+padding-left: 50px;
+border-left: 2px dashed var(--color-naranja);
+
+}
+
+.proyecto__descripcion h3 {
+    margin-bottom: 20px;
+}
+.proyecto__descripcion a {
+    color: var(--color-naranja);
+    text-decoration: none;
+    font-size: 25px;
+}
+.proyecto__descripcion a i{
+    
+    color: var(--color-fondo);
+}
+@media screen and (max-width: 996px) {
+    .proyecto__img {
+        width: 250px;
+        height: 150px;
+    }
+}
+
+@media screen and (max-width:980px){
+
+    nav{
+        display: none;
+    }
+    .nav-responsive{
+        display: block;
+    }
+    nav.responsive{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 75px;
+        background-color: #252A2E;
+        width: 180px;
+    }
+    nav.responsive ul{
+        display: block !important;
+    }
+    nav.responsive ul li{
+        border-bottom: 1px solid #fff;
+        padding: 10px 0;
+    }
+
+    .inicio .contenido-banner img {
+        
+        border: 9px solid var(--color-naranja);        
+        width: 65%;
+       
+    }
+    
+    .inicio .contenido-banner h1 {       
+        font-size: 40px;
+    }       
+    
+    .inicio .contenido-banner h2 {
+        font-size: 17px;
+    }  
+    
+    .contenedor-intereses .interes {
+        width: 100px;
+        height: 100px;
+        font-size: 14px;        
+    }
+
+    .curriculum .contenido-seccion {
+        width: 90%;
+    }
+
+    .curriculum__educacion .casa {       
+        width: 100%;        
+    }
+    
+}
+@media screen and ( max-width: 866px) {
+    .portafolio .proyecto {
+        flex-direction: column;
+    }
+    .proyecto:nth-child(odd) .proyecto__descripcion  {
+        margin: 20px 0;
+        padding-bottom: 20px ;
+        border-bottom: 2px dashed var(--color-naranja);
+        border-right: none;
+    }
+        
+    .proyecto:nth-child(even) .proyecto__descripcion  {            
+        padding-left: 0;
+        margin: 20px 0;
+        padding-bottom: 20px ;
+        border-bottom: 2px dashed var(--color-naranja);
+        border-left: none;
+        
+    }
+    .proyecto >  a {
+        margin: 0 auto;
+    }
+@media screen and (max-width:700px){
+
+    .inicio .contenido-banner img {
+        margin-top: 40px;
+        border: 8px solid var(--color-naranja);
+        display: block;
+        width: 60%;
+        margin: auto;
+        border-radius: 50%;
+    }
+    
+    .inicio .contenido-banner h1 {
+        margin-top: 40px;
+        font-size: 38px;
+        font-family: 'Righteous';
+        text-transform: uppercase;
+    }
+    
+    .inicio .contenido-banner h2 {
+        font-size: 17px;
+        font-weight: normal;
+    }    
+   
+    .sobremi .fila{
+        display: block;
+    }
+    .sobremi .fila .col{
+        width: fit-content;
+    }
+
+    .sobremi .contenedor-intereses {
+        display: flex;
+        justify-content: center;
+    }
+
+    .curriculum__educacion .casa  {       
+        flex-direction: column;             
+    }
+    .curriculum__educacion .casa span {       
+        flex-direction: column;  
+        width: 115px;  
+        margin-top: 5px;
+        padding: 2px 8px;         
+    }
+    
+
+
+    .skills .fila{
+        display: block;
+    }
+    .skills .fila .col{
+        width: 100%;
+    }
+    .skills .fila .col .barra-skill{
+        width: 100%;
+    }
+
+    .curriculum .fila{
+        display: block;
+    }
+    .curriculum .fila .col{
+        width: 90%;
+    }
+    .curriculum .fila .derecha{
+        margin-left: 20px;
+    }
+
+    .portfolio .galeria{
+        display: block;
+        width: 100%;
+    }
+    .portfolio .galeria .proyecto{
+        max-width: 100%;
+    }
+    .portfolio .galeria .proyecto img{
+        width: 100%;
+    }
+    .contacto .fila{
+        display: block;
+    }
+    .contacto .fila .col{
+        width: 100%;
+    }
+}
 
 
 
